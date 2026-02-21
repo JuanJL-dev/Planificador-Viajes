@@ -1,4 +1,4 @@
-// src/components/WeatherCard.jsx
+
 import React from 'react';
 
 function WeatherCard({ weatherData }) {
@@ -21,4 +21,4 @@ function WeatherCard({ weatherData }) {
     );
 }
 
-export default WeatherCard; // <- ¡Esta es la línea clave que faltaba!
+export default WeatherCard; 
