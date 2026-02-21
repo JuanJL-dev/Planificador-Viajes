@@ -1,0 +1,194 @@
+/* src/App.css */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  box-shadow: var(--shadow);
+}
+
+.header h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-form input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-form input:focus {
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.search-form button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.search-form button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  flex: 2;
+  min-width: 400px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* GitHub Card Specifics */
+.github-card img {
+  border: 3px solid var(--secondary-color);
+  margin-bottom: 10px;
+}
+.github-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Weather Card Specifics */
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.weather-info h3 {
+  font-size: 2rem;
+  color: #e67e22;
+}
+.weather-info p {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Map Card Specifics */
+.map-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.save-btn {
+  background-color: #27ae60;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(39, 174, 96, 0.3);
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .right-column {
+    min-width: 100%;
+  }
+}
